@@ -1,15 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NoteVerse|Notes</title>
-    <link rel="stylesheet" href="note.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Sticky Note</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="stickystyle.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>NOtes</h1>
-        <button>Create Notes</button>
+  <!-- Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <!--Trigger-->
+      <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+        aria-controls="offcanvasExample">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--trigger-->
+      <a class="navbar-brand fw-bold text-uppercase me-auto " href="#">NoteVerse</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="d-flex ms-auto">
+          <div class="input-group my-3 my-lg-0">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Search"
+              aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary btn btn-primary" type="button" id="button-addon2"><i
+                class="bi bi-search"></i></button>
+          </div>
+        </form>
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="bi bi-person-circle"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="Home2.htm">HOME</a></li>
+              <li><a class="dropdown-item" href="Contact.html">Contact us</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="index.htm">Log out</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
+  <!--Navbar-->
+  <!--offcanvas-->
+  <div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" tabindex="-1" id="offcanvasExample"
+    aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-body p-0">
+      <nav class="navbar-dark">
+        <ul class="navbar-nav">
+          <li>
+            <div class="text-muted small fw-bald text-uppercase px-3">CORE</div>
+          </li>
+          <li>
+            <a href="Dashboard.htm" class="nav-link px-3 active">
+              <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <div class="dropdown">
+              <a class="btn btn-primary" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                New+
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="notepad.htm">Mini Notepad</a></li>
+                <li><a class="dropdown-item" href="sticky notes.htm">Sticky notes</a></li>
+                <li><a class="dropdown-item" href="Undermaintainence.htm">Some More</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="my-4">
+            <hr class="dropdown-divider" />
+          </li>
+          <li>
+            <div class="text-muted small fw-bald text-uppercase px-3">Interface</div>
+          </li>
+          <li>
+            <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#collapseExample" role="button"
+              aria-expanded="false" aria-controls="collapseExample">
+              <span class="me-2"><i class="bi bi-layout-split"></i></span>
+              <span>My Notes</span>
+              <span class="right-icon ms-auto"><i class="bi bi-chevron-down"></i></span>
+            </a>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body firstcard">
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a href="#!" class="nav-link px-3">
+                      <span class="me-2">
+                        <i class="bi bi-clock-history"></i>
+                      </span>
+                      <span>Recent Notes</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#!" class="nav-link px-3">
+                      <span class="me-2">
+                        <i class="bi bi-trash"></i>
+                      </span>
+                      <span>Trash</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="my-3">
+            <hr class="dropdown-divider" />
+          </li>
+          <li>
+            <div class="text-muted small fw-bald text-uppercase mt-3">More</div>
+          </li>
+          <li class="Template ms-5">
+            <span><i class="bi bi-layout-wtf"></i></span>
+            <span>Template</span>
+          </li>
+          <li></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!--offcanvas-->
+  <!--Main-->
+  <main class="mt-5 pt-3">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 fw-bold fs-4"><img src="NoteImg.png" alt="logo" class="logo1"> Sticky Note</div>
+      </div>
+      <div class="row">
+
+      </div>
+      <div class="row">
+        <div class="notes-container">
+          <div class="btn-group mt-2 " role="group" aria-label="Basic example">
+            <button type="button" class="btn1 btn-dark">More</button>
+          </div>
+          <!-- <div class="input-group">
+            <span class="input-group-text">My notepad</span>
+            <textarea class="form-control" aria-label="With textarea"></textarea>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--Main-->
+  <!--Script link-->
+  <script>
+    const notesContainer = document.querySelector(".notes-container");
+    const createBtn = document.querySelector(".btn1");
+    let notes = document.querySelector(".input-group");
+
+
+    createBtn.addEventListener("click", () => {
+      let inputBox = document.createElement("p");
+      let img = document.createElement("img");
+      inputBox.className = "input-box";
+      inputBox.setAttribute("contenteditable", "true")
+      img.src = "trash.png";
+      notesContainer.appendChild(inputBox).appendChild(img);
+    })
+
+    notesContainer.addEventListener("click", function (e) {
+      if (e.target.tagName === "IMG") {
+        e.target.parentElement.remove();
+      }
+    })
+
+  </script>
+  <!--Script link-->
 </body>
+
 </html>

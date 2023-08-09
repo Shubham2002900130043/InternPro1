@@ -19,9 +19,7 @@
 
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="About.htm">About</a></li>
           <li><a href="Contact.html">Contact US</a></li>
-          <li><a href="Feedback.htm">Feedback</a></li>
         </ul>
       </div>
     </nav>
@@ -31,7 +29,7 @@
       <div class="sub_title">Virtual Universe of notes</div>
       <div class="btns">
         <a href="sign-up.html"><button>Sign up</button></a>
-        <a href="index.html"><button>Sign in</button></a>
+        <a href="index.html"><button>Login</button></a>
       </div>
       <!--Clock-->
       <div class="clock">
@@ -52,16 +50,12 @@
     setInterval(() => {
       let currentTime = new Date();
 
-      hrs.innerHTML = currentTime.getHours();
-      min.innerHTML = currentTime.getMinutes();
-      sec.innerHTML = currentTime.getSeconds();
+      hrs.innerHTML = (currentTime.getHours()<10?"0":"") +currentTime.getHours();
+      min.innerHTML = (currentTime.getMinutes()<10?"0":"") +currentTime.getMinutes();
+      sec.innerHTML = (currentTime.getSeconds()<10?"0":"") +currentTime.getSeconds();
     }, 1000)
 
-    let currentTime = new Date();
 
-    hrs.innerHTML = currentTime.getHours();
-    min.innerHTML = currentTime.getMinutes();
-    sec.innerHTML = currentTime.getSeconds();
   </script>
   <!-- <div class="footer">
     <center><a href="#"> 2021 Noteverse All rights reserved</a></center>
